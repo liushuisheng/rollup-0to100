@@ -8,7 +8,7 @@ rollup新手教练系统
 - REPL：http://rollupjs.org/repl/
 
 ### rollup学习资源
-待补充...
+ - rollup插件列表 https://github.com/rollup/awesome
 
 ### rollup经典项目
 待补充...
