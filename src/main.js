@@ -9,9 +9,7 @@ function main() {
   console.log(version)
   console.log(Button)
   
-  import('./sayHi').then(({ default: sayHi }) => {
-    sayHi()
-  })
+  console.log(sayHi())
 }
 
 export {

@@ -4,6 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var $ = require('jquery');
 var core = require('@lui/core');
+var sayHi = require('./sayHi-b8cff2fb.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -17,9 +18,7 @@ function main() {
   console.log(version);
   console.log(core.Button);
   
-  Promise.resolve().then(function () { return require('./sayHi-f5f1bbef.js'); }).then(({ default: sayHi }) => {
-    sayHi();
-  });
+  console.log(sayHi.sayHi());
 }
 
 exports.main = main;

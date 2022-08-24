@@ -4,4 +4,4 @@ function sayHi() {
   return 'say hi'
 }
 
-exports["default"] = sayHi;
+exports.sayHi = sayHi;

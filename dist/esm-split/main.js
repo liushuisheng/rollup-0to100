@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { Button } from '@lui/core';
+import { s as sayHi } from './sayHi-b51702c9.js';
 
 var version = "1.0.0";
 
@@ -9,9 +10,7 @@ function main() {
   console.log(version);
   console.log(Button);
   
-  import('./sayHi-336010be.js').then(({ default: sayHi }) => {
-    sayHi();
-  });
+  console.log(sayHi());
 }
 
 export { main };

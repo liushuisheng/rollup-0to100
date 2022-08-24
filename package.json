@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rollup -c",
     "build2": "node scripts/build.js",
-    "build-split": "rollup -c rollup.config.split.js",
+    "build3": "rollup -c rollup.config.2.js",
     "loadConfig": "node scripts/loadConfig.js"
   },
   "devDependencies": {
@@ -18,6 +18,7 @@
     "@lui/core": "5.1.0-alpha.35",
     "@rollup/plugin-json": "^4.1.0",
     "jquery": "^3.6.0",
+    "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-terser": "^7.0.2"
   }
 }
