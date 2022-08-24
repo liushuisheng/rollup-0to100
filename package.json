@@ -1,0 +1,8 @@
+{
+  "name": "rollup-0to100",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/liushuisheng/rollup-0to100.git",
+  "author": "刘水生 <liushuisheng@landray.com.cn>",
+  "license": "MIT"
+}
