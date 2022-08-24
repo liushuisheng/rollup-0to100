@@ -1,24 +1,49 @@
-const path = require('path')
+import json from '@rollup/plugin-json'
+import { terser } from 'rollup-plugin-terser'
 
-module.exports = {
-  input: path.join(__dirname, 'src/main.js'),
+export default {
+  input: 'src/main.js',
   output: [
     {
-      file: path.join(__dirname, 'dist/lib/main.js'),
+      file: 'dist/lib/main.js',
       format: 'cjs'
     },
     {
-      file: path.join(__dirname, 'dist/es/main.js'),
+      file: 'dist/es/main.js',
       format: 'es'
     },
     {
-      file: path.join(__dirname, 'dist/umd/main.js'),
+      file: 'dist/umd/main.js',
       format: 'umd',
       name: 'myLib',
       globals: {
-        jquery: '$'
+        jquery: '$',
+        '@lui/core': 'lui'
+      }
+    },
+    {
+      file: 'dist/iife/main.js',
+      format: 'iife',
+      name: 'myLib',
+      globals: {
+        jquery: '$',
+        '@lui/core': 'lui'
+      }
+    },
+    {
+      file: 'dist/iife/main.min.js',
+      format: 'iife',
+      name: 'myLib',
+      plugins: [terser()],
+      globals: {
+        jquery: '$',
+        '@lui/core': 'lui'
       }
     }
   ],
-  external: ['jquery']
+  plugins: [
+    json(),
+    // terser()
+  ],
+  external: ['jquery', '@lui/core']
 }

@@ -1,8 +1,5 @@
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('@lui/core')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'jquery', '@lui/core'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.myLib = {}, global.$, global.lui));
-})(this, (function (exports, $, core) { 'use strict';
+var myLib = (function (exports, $, core) {
+  'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -21,4 +18,6 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+  return exports;
+
+})({}, $, lui);
