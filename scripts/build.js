@@ -51,7 +51,7 @@ function watch() {
     console.log(event.code, EVENT_FLAG[event.code])
 
     //测试监听关闭
-    // if(event.code === 'END') watcher.close()
+    if(event.code === 'END') watcher.close()
   })
 }
 
@@ -60,10 +60,19 @@ async function build() {
   const bundle = await rollup.rollup(inputOptions)
 
   if (Array.isArray(outputOptions)) {
-    outputOptions.forEach(outputOption => bundle.write(outputOption))
+    outputOptions.forEach(outputOption => generateOutput(bundle, outputOption))
   } else {
-    await bundle.write(outputOptions)
+    await generateOutput(bundle, outputOptions)
   }
+}
+
+async function generateOutput(bundle, outputOption) {
+  //写入磁盘
+  // bundle.write(outputOption)
+
+  // const { output } = await bundle.generate(outputOption)
+  // console.log('===output', JSON.stringify(output, null, 4))
+
 }
 
 

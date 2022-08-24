@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "build2": "node scripts/build.js"
+    "build2": "node scripts/build.js",
+    "loadConfig": "node scripts/loadConfig.js"
   },
   "devDependencies": {
     "rollup": "^2.78.1"
