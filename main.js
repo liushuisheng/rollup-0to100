@@ -4,4 +4,4 @@ function main() {
 
 main()
 
-exports.module = main
+module.exports = main
