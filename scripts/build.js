@@ -42,9 +42,9 @@ function watch() {
   const watcher = rollup.watch({
     ...rollupConfig,
     watch: {
-      chokidar: true,
-      // include: path.join(__dirname, 'src'),
-      exclude: path.join(__dirname, 'node_modules')
+      include: 'src/**',
+      exclude: 'node_modules/**',
+      skipWrite: true
     }
   })
   watcher.on('event', event => {
