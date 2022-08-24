@@ -8,6 +8,7 @@
   "scripts": {
     "build": "rollup -c",
     "build2": "node scripts/build.js",
+    "build-split": "rollup -c rollup.config.split.js",
     "loadConfig": "node scripts/loadConfig.js"
   },
   "devDependencies": {
