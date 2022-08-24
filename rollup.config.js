@@ -1,20 +1,24 @@
-
+const path = require('path')
 
 module.exports = {
-  input: 'src/main.js',
+  input: path.join(__dirname, 'src/main.js'),
   output: [
     {
-      file: 'dist/lib/main.js',
+      file: path.join(__dirname, 'dist/lib/main.js'),
       format: 'cjs'
     },
     {
-      file: 'dist/es/main.js',
+      file: path.join(__dirname, 'dist/es/main.js'),
       format: 'es'
     },
     {
-      file: 'dist/umd/main.js',
+      file: path.join(__dirname, 'dist/umd/main.js'),
       format: 'umd',
-      name: 'myLib'
+      name: 'myLib',
+      globals: {
+        jquery: '$'
+      }
     }
-  ]
+  ],
+  external: ['jquery']
 }
