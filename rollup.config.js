@@ -1,5 +1,7 @@
 import json from '@rollup/plugin-json'
 import { terser } from 'rollup-plugin-terser'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import scss from 'rollup-plugin-scss'
 
 export default {
   input: 'src/main.js',
@@ -42,8 +44,13 @@ export default {
     }
   ],
   plugins: [
+    //解析json文件
     json(),
+    //压缩
     // terser()
+    //解析外部模块的插件
+    nodeResolve(),
+    scss()
   ],
-  external: ['jquery', '@lui/core']
+  // external: ['jquery', '@lui/core']
 }
